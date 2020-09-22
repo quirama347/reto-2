@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#column1 {
+    background-color: #030C2A;
+}
+
+.cabeza {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+#label{
+    margin-top: 20px;
+    height: 10px;
+}
+
+#input {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.control{
+    margin-top: 10px;
+}
+
+.button {
+    margin-top: 20px;
+    width: 180px;
+}
+
+#link {
+    margin-top: 50px;
+}
+
+#column2 {
+    background-color: white;
+    border: solid black 1px;
+}
+
+.robot {
+    width: 200px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+#h1{
+    font-family: 'Baloo Tammudu 2';
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#h3{
+    font-family: 'Baloo Tammudu 2';
+    margin-bottom: 50px;
+}
+
+#icons i{
+    margin-top: 50px;
+}
+
+#icons a{
+    margin: 60px;
+    font-size: 40px;
+    color: black;
+}
+
+#icons a:hover {
+    color: aquamarine;
+}
