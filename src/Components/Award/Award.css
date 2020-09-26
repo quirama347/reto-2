@@ -6,10 +6,23 @@ h1 {
 .panel-heading {
     margin-top: 10px;
 }
-#miniatura {
-    width: 45px;
-    margin: 20px;
-    border-radius: 10%;
+
+#user1 {
+    margin-left: 50px;
+}
+
+#user{
+    margin-right: 30px;
+}
+
+#grado {
+    margin-left: 30px;
+}
+
+#mini {
+    margin-left: 30px;
+    width: 60px;
+    height: 80px;
 }
 
 .media{
@@ -22,8 +35,22 @@ h1 {
     
 }
 
-.pagination-list{
+#prod {
+    margin: 20px;
+}
+
+.pagination {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+#column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+}
+

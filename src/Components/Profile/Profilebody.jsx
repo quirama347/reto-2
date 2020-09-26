@@ -3,17 +3,14 @@ import facebook from '../../Images/facebook.png'
 import tiktok from '../../Images/tiktok.png'
 import instagram from '../../Images/instagram.jpg'
 import youtube from '../../Images/youtube.png'
-import robot3 from '../../Images/robot3.png'
+import snap from '../../Images/snap.png'
+import twitter from '../../Images/twitter.png'
 import { withRouter } from "react-router-dom";
-
 class Profilebody extends Component {
     render() {
         return (
             <div className="container">
                 <div className="columns" id="redes">
-                <div className="column is-4">
-                        <img src={robot3} id="robot-profile" alt="robot"/>
-                    </div>
                     <div className="column is-one-quarter" id="column-redes">
                     <img src={facebook} alt=""/>
                     <br/>
@@ -25,15 +22,19 @@ class Profilebody extends Component {
                     <br/>
                     <img src={tiktok} alt=""/>
                     </div>
+                    <div className="column is-one-quarter" id="column-redes">
+                    <img src={snap} alt=""/>
+                    <br/>
+                    <img src={twitter} alt=""/>
+                    </div>
                 </div>
                 <div id="button">
-                    <button className="button is-primary" onClick={() => this.props.history.push("/Award") }>Puntos</button>
-                    <button className="button is-primary">Evaluación</button>
-                    <button className="button is-primary">Mi colegio</button>
+                    <button className="button is-primary" onClick={() => this.props.history.push("/Award")}>Recompensa</button>
+                    <button className="button is-primary" onClick={() => this.props.history.push("/Review")}>Evaluación</button>
+                    <button className="button is-primary" onClick={() => this.props.history.push("/Home") }>Mi colegio</button>
                 </div>
             </div>
         )
     }
 }
-
-export default withRouter(Profilebody)
+export default withRouter(Profilebody);

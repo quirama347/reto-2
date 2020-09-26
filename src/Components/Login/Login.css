@@ -1,17 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 #column1 {
     background-color: #030C2A;
 }
 
-.cabeza {
-    width: 150px;
+#cabeza {
+    display: block;
+    margin: auto;
+    width: 250px;
     border-radius: 50%;
+    background-color: cornsilk;
     margin-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #label{
@@ -21,7 +19,12 @@
 
 #input {
     width: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.field.control.has-icons-left {
+    width: 400px;
+    margin: auto;
 }
 
 .control{
@@ -59,16 +62,25 @@
     margin-bottom: 50px;
 }
 
-#icons i{
+#icons-login i{
     margin-top: 50px;
 }
 
-#icons a{
+#icons-login a{
     margin: 60px;
-    font-size: 40px;
+    font-size: 60px;
     color: black;
 }
 
-#icons a:hover {
+#icons-login a:hover {
+    color: aquamarine;
+}
+
+#active {
+    width: 100px;
+    font-size: 40px;
+}
+
+#active a:hover {
     color: aquamarine;
 }

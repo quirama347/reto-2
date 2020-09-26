@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
-import robot3 from '../../Images/robot3.png'
-export default class Awardnav extends Component {
+import cabezarobot from '../../Images/cabezarobot.png'
+import { withRouter } from "react-router-dom"
+class Awardnav extends Component {
+    state = {
+        user: ''
+    }
+    componentDidMount() {
+        const user = localStorage.getItem("user")
+        this.setState({ user: user ? user : '' });
+        }
+    close = () => {
+        localStorage.removeItem("auth");
+        this.props.history.replace("/")
+    }
+
     render() {
         return (
             <div>
                 <nav className="navbar" id="navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="/">
-                    <img id="miniatura" src={robot3} />
+                    <img id="mini" src={cabezarobot} />
                     </a>
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
@@ -17,25 +30,24 @@ export default class Awardnav extends Component {
                 </div>
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-start">
-                    <a className="navbar-item">
-                        Perfil Estudiante
+                    <a className="navbar-item" id="user1">
+                    <i className="fas fa-user" id="user"></i>
+                        { this.state.user && this.state.user }
                     </a>
-                    <a className="navbar-item">
-                        Grado 
-                    </a>
+                    <a className="navbar-item" id="grado">Grado</a>
                     </div>
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
-                        <a className="button is-primary">
-                            <strong>PUNTOS</strong>
-                        </a>
-                        </div>
+                        <button className="button is-primary">Puntos:1500</button>
+                        <button className="button is-light" onClick={this.close}>Cerrar Sesión</button> 
                     </div>
                 </div>
             </div>
-        </nav>
             </div>
+        </nav>
+    </div>
         )
     }
 }
+export default withRouter(Awardnav);
