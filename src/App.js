@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Components/Login/Login'
 import 'bulma/css/bulma.css';
-// import '../node_modules/@fortawesome/react-fontawesome'
+// import './@fortawesome/react-fontawesome'
 import './App.css';
 import Profile from './Components/Profile/Profile';
 import {

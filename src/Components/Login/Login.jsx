@@ -2,7 +2,14 @@ import React, { Component } from 'react'
 import './Login.css';
 import cabezarobot from '../../Images/cabezarobot.png';
 import robot3 from '../../Images/robot3.png';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas,faLock, faUser,faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import {fab,faTwitter,faFacebook} from '@fortawesome/free-brands-svg-icons'
 import { withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+library.add(fas, faLock,faUser,faEnvelope)
+library.add(fab,faTwitter,faFacebook)
+
 class Login extends Component {
     state = {
         users: [],
@@ -62,14 +69,14 @@ class Login extends Component {
                     <div className="field control has-icons-left">
                         <input className="input is-info" name="name" onChange={this.handleOnchange} placeholder="Ingresa tu usuario o Correo" id="email" required/>
                         <span className="icon is-left">
-                        <i className="zmdi zmdi-account"></i>
+                        <FontAwesomeIcon icon={faUser}/>
                         </span>
             </div>
 ​               <label className="label">Contraseña</label>
                     <div className="field control has-icons-left">
                         <input className="input is-info" onChange={this.handleOnchange} name="password" type="password" placeholder="Ingresa tu clave" id="password" required/>
                         <span className="icon is-small is-left">
-                        <i className="zmdi zmdi-email"></i>
+                        <FontAwesomeIcon icon={faLock}/>
                         </span>
                     </div>
                     <div className="control">
@@ -89,9 +96,9 @@ class Login extends Component {
                     <h1 id="h1">E D D Y - A P P</h1>
                     <h3 id="h3">Educacion de alta calidad, al alcance de todos</h3>
                         <span id="icons-login">
-                            <a href="https://www.facebook.com/Eddy-Software-Educativo-105583811295277" target="_blank"><i className="fab fa-facebook-f"></i></a>
-                            <a href="https://twitter.com/SoftwareEddy" target="_blank"><i className="fab fa-twitter"></i></a>
-                            <a href="mailto:eddysoftwareducativo@gmail.com" target="_blank"><i className="fas fa-envelope"></i></a>
+                            <a href="https://www.facebook.com/Eddy-Software-Educativo-105583811295277" target="_blank"><FontAwesomeIcon icon={faFacebook}/></a>
+                            <a href="https://twitter.com/SoftwareEddy" target="_blank"><FontAwesomeIcon icon={faTwitter}/></a>
+                            <a href="mailto:eddysoftwareducativo@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope}/></a>
                         </span>
             </section>
             </div>

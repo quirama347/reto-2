@@ -3,7 +3,12 @@ import "./RegisterUser.css";
 import "bulma/css/bulma.css";
 import robot3 from "../../Images/robot3.png";
 import cabezarobot from "../../Images/cabezarobot.png";
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {fab,faTwitter,faFacebook} from '@fortawesome/free-brands-svg-icons'
+import { fas,faLock, faUser,faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+library.add(fas, faLock,faUser)
+library.add(fab, faLock,faUser,faEnvelope)
 export default class Register extends Component {
   render() {
     return (
@@ -17,13 +22,13 @@ export default class Register extends Component {
               href="https://www.facebook.com/Eddy-Software-Educativo-105583811295277"
               target="_blank"
             >
-              <i className="fab fa-facebook-f"></i>
+             <FontAwesomeIcon icon={faFacebook}/>
             </a>
             <a href="https://twitter.com/SoftwareEddy" target="_blank">
-              <i className="fab fa-twitter"></i>
+            <FontAwesomeIcon icon={faTwitter}/>
             </a>
             <a href="mailto:eddysoftwareducativo@gmail.com" target="_blank">
-              <i className="fas fa-envelope"></i>
+            <FontAwesomeIcon icon={faEnvelope}/>
             </a>
           </span>
         </section>
@@ -48,7 +53,7 @@ export default class Register extends Component {
                 required
               />
               <span className="icon is-left">
-                <i className="zmdi zmdi-account"></i>
+              <FontAwesomeIcon icon={faUser}/>
               </span>
             </div>
             ​ <label className="label">Contraseña</label>
@@ -63,7 +68,7 @@ export default class Register extends Component {
                 required
               />
               <span className="icon is-small is-left">
-                <i className="zmdi zmdi-email"></i>
+              <FontAwesomeIcon icon={faLock}/>
               </span>
             </div>
             <div className="control1">
