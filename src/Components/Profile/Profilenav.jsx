@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import cabezarobot from '../../Images/cabezarobot.png'
 import './Profile.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas, faUser } from '@fortawesome/free-solid-svg-icons'
 import { withRouter } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+library.add(fas, faUser)
+
 class Profilenav extends Component {
     state = {
         user: ''
@@ -31,7 +36,7 @@ class Profilenav extends Component {
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-start">
                     <a className="navbar-item" id="user1">
-                    <i className="fas fa-user" id="user"></i>
+                    <FontAwesomeIcon icon={faUser}/>
                         { this.state.user && this.state.user }
                     </a>
                     <a className="navbar-item" id="grado">Grado</a>

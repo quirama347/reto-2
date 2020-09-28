@@ -9,6 +9,8 @@ p {
 #cabezarobot {
     width: 100px;
     border-radius: 20%;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .control{
