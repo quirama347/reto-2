@@ -12,7 +12,7 @@ library.add(fab, faLock,faUser,faEnvelope)
 export default class Register extends Component {
   render() {
     return (
-      <div className="columns" id="register">
+      <div className="columns is-centered" id="register">
         <section className="column" id="column2">
           <img className="robot" src={robot3} alt="robot" />
           <h1 id="h1">E D D Y - A P P</h1>
